@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:m="https://www.getmedusa.io/medusa.xsd">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello to Medusa!</title>
+    <link rel="stylesheet" href="/css/sample-styling.css" />
+</head>
+<body>
+
+<h1>Hello, this is your server-rendered micro-frontend!</h1>
+<h2>Powered by Medusa UI</h2>
+
+<section id="action-example">
+    <p th:text="${counter}"></p>
+    <button m:click="updateCounter(1)">Increase counter by 1</button>
+</section>
+
+<section id="fragment-example">
+    <m:fragment service="fragment" ref="sample">
+        <p class="fallback">Oops, not found</p>
+    </m:fragment>
+</section>
+
+</body>
+</html>
