@@ -15,6 +15,8 @@ Fixed by disabling csrf in security-config
 
 - [x] Connection to Hydra
 - [x] Displaying fragment `sample` from service `fragment`
+- [x] UI **IS** updated from controller when **INTERNAL** fragments are use
+- [ ] UI **IS NOT** updated from controller when **EXTERNAL** fragments are use 
 
 ## Fragments
 [fragment sample](http://localhost:8888/sample)
