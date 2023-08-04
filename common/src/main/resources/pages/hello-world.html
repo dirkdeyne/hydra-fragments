@@ -10,14 +10,20 @@
 <h1>Hello, this is your server-rendered micro-frontend!</h1>
 <h2>Powered by Medusa UI</h2>
 
-<section id="action-example">
-    <p th:text="${counter}"></p>
-    <button m:click="updateCounter(1)">Increase counter by 1</button>
+<section>
+    <p>Date: <span th:text="${date}"></span></p>
+    <button m:click="refreshDate()">Refresh Date</button>
 </section>
 
-<section id="fragment-example">
+<section>
+    <m:fragment ref="counter">
+        <p class="fallback">Oops, counter not found</p>
+    </m:fragment>
+</section>
+
+<section>
     <m:fragment service="fragment" ref="sample">
-        <p class="fallback">Oops, not found</p>
+        <p class="fallback">Oops, sample not found</p>
     </m:fragment>
 </section>
 

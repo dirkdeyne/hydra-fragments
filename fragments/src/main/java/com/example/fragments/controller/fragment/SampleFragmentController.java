@@ -29,10 +29,6 @@ public class SampleFragmentController {
         return $$("date", getCurrentDate());
     }
 
-//    @Scheduled(fixedRate = 1000)
-//    public void updateDateInFragmentOnASchedule() {
-//        serverToClient.sendAttributesToSessionTag($$("date", getCurrentDate()), StandardSessionTagKeys.ROUTE, "/");
-//    }
 
     private String getCurrentDate() {
         return dtf.format(LocalTime.now());
