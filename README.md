@@ -8,7 +8,7 @@ Fixed by disabling csrf in security-config
 
 - [x] Register applications
 - [x] Serving fragment between `common` and `fragments`
-- [] When fragments are used, normal actions no longer work.
+- [ ] When fragments are used, normal actions no longer work.
 
 ## Common
  [common hello](http://localhost:8889/hello)
