@@ -6,9 +6,12 @@
 </head>
 <body>
 
-<section m:ref="sample">
+<section m:ref="sample-simple">
     <p>Hello world</p>
 </section>
-<p>It is now : </p><span th:text="${date}"></span>
+
+<section m:ref="sample-complex">
+    <p>It is now : <span th:text="${date}"> here you should see the date from the 'fragments' service</span> </p>
+</section>
 </body>
 </html>
