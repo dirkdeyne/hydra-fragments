@@ -1,0 +1,18 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:m="http://www.getmedusa.io">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reference a Fragment</title>
+</head>
+<body>
+<m:fragment ref="sample-complex">
+    <p class="fallback">Oops, simple sample not found</p>
+</m:fragment>
+<m:fragment  service="fragment" ref="sample-complex">
+    <p class="fallback">Oops, simple sample not found</p>
+</m:fragment>
+</body>
+</html>

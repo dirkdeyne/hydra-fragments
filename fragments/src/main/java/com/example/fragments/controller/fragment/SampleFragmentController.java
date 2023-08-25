@@ -8,8 +8,10 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.TimeZone;
 
 import static io.getmedusa.medusa.core.attributes.Attribute.$$;
 
@@ -26,12 +28,12 @@ public class SampleFragmentController {
     }
 
     public List<Attribute> setupAttributes() {
-        return $$("date", getCurrentDate());
+        return $$("us_date", getCurrentDate());
     }
 
 
     private String getCurrentDate() {
-        return dtf.format(LocalTime.now());
+        return dtf.format(LocalTime.now(ZoneId.of("America/Los_Angeles")));
     }
 
 }
